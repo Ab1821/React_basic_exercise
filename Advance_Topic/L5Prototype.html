@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //Protoype : object is a special type og enumerable object to which additional 
+    // properties can be added which will be shared across all instance
+
+    function customer(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    const data = new customer("abhishek", 27)
+    customer.prototype.lastname = "solanki";       //Add new property using Protoype
+    customer.prototype.profession = "Engineer";
+
+    console.log(data.lastname);
+
+</script>

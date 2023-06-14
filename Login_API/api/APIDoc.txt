@@ -1,0 +1,4 @@
+
+URL :"http://localhost/php/api/registration"
+Success : {Res:[Data:'urData',Msg:'Msg',Code:'1']} 
+fail : 

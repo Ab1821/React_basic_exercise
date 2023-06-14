@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- closure: inner function can access variables and parameter of outer function (however,can not access arguments object of function) -->
+
+</body>
+
+</html>
+<script>
+    function outer() {
+        let count = 0;
+        function inner() {
+            return count += 1;
+        }
+        return inner;
+    }
+    const data = outer();
+    console.log(data());
+
+
+
+    function test() {
+        let a = "Welcome test"
+        function foo() {
+            return a;
+        }
+        return foo;
+    }
+    const show = test();
+    console.log(show());
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // class: is a template for javscript object;
+    // object: is a instance of a class which allocates class memory
+
+    class myClass {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+
+        }
+    }
+    const objclass = new myClass("Tops", 27);              //create object using "new keyword"
+    console.log(objclass);
+
+    //
+    class newClass {
+        constructor(fname, lname) {
+            this.fname = "Tops";
+            this.lname = "Technologies";
+        }
+    }
+
+    const data = new newClass();
+    console.log(data);
+    console.log(data.fname);
+</script>

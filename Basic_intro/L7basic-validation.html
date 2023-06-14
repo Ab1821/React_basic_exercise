@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <form method="post" onsubmit="return submitData()"> -->
+
+    <table align="center" border="1">
+        <tr>
+            <td> Name : </td>
+            <td> <input type="text" id="name" name="name" onblur="validation(this,'nameError')"
+                    onkeydown="validName(this,'nError')">
+                <span id="nameError"></span>
+                <span id="nError"></span>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><input type="text" id="email" onblur="validation(this,'emailError')"
+                    onkeydown="validEmail(this,'mailError')">
+                <span id="emailError"></span>
+                <span id="mailError"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="pwd" name="pwd" onblur=" validation(this,'perror')"
+                    onkeydown="pwdValid(this,'pwdError')">
+                <span id="perror"></span>
+                <span id="pwdError"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile : </td>
+            <td> <input type="text" id="mobile" onblur="validation(this,'mobileError')"
+                    onkeydown="validmobile(this,'mError')">
+                <span id="mobileError"></span>
+                <span id="mError"></span>
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center"><input type="submit" id="btn" value="Submit">
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <!-- </form> -->
+</body>
+
+</html>
+<script>
+
+    function validation(e, spnid) {
+
+        if (e.value == "") {
+
+            document.getElementById(spnid).style.color = "red";
+            document.getElementById(spnid).innerHTML = "Please enter data!";
+        }
+    }
+
+    function submitData() {
+
+
+        let fname = document.getElementById(".name").value;
+        if (fname == "") {
+            alert("Please enter name");
+            return false;
+        }
+
+        let email = document.getElementById(".email").value;
+        if (email == "") {
+            alert("Please enter email");
+            return false;
+
+        }
+        else {
+            console.log('data submitted!');
+
+        }
+        let pwd = document.getElementById(".pwd").value;
+        if (fname == "") {
+            alert("Please enter name");
+            return false;
+        }
+        let mobile = document.getElementById(".mobile").value;
+        if (mobile == "") {
+            alert("Please enter mobile");
+            return false;
+
+        }
+        else {
+            console.log('data submitted!');
+        }
+    }
+
+    function validName(e, spanid) {
+        let name = /^[a-zA-Z]+$/
+        if (name.test(e.value)) {
+            document.getElementById(spanid).innerHTML = "";
+
+        }
+        else {
+            document.getElementById(spanid).style.color = "red";
+            document.getElementById(spanid).innerHTML = "Please enter only character!";
+        }
+    }
+
+
+    function validEmail(e, spanid) {
+        let email = /^([a-z0-9.-_])+@+([a-z0-9.-_])+\.([a-z]{2,3})$/
+
+        if (email.test(e.value)) {
+            document.getElementById(spanid).innerHTML = "";
+
+        }
+        else {
+            document.getElementById(spanid).style.color = "red";
+            document.getElementById(spanid).innerHTML = "Please enter Valid email!";
+        }
+    }
+
+    function pwdValid(e, spanid) {
+        let pwd = /^[a-zA-Z0-9.-_]{3,5}$/
+        if (pwd.test(e.value)) {
+            document.getElementById(spanid).innerHTML = "";
+
+        }
+        else {
+            document.getElementById(spanid).style.color = "red";
+            document.getElementById(spanid).innerHTML = "Please enter minimum 3 and maximum 5 character!";
+        }
+
+    }
+    function validmobile(e, spanid) {
+        let mobile = /^[0-9]{10}$/
+        if (mobile.test(e.value)) {
+            document.getElementById(spanid).innerHTML = "";
+
+        }
+        else {
+            document.getElementById(spanid).style.color = "red";
+            document.getElementById(spanid).innerHTML = "Please enter valid mobile";
+        }
+    }
+</script>

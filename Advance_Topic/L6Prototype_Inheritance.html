@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function customer(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    const data = new customer("Angella", 24);
+
+    function Person(name, age, profession) {
+        customer.call(this, name, age)
+        this.profession = "Doctor";
+    }
+
+    const obj = new Person("John", 25, "Teacher");
+    console.log(obj);
+    console.log(obj.name);
+    console.log(obj.profession);
+</script>

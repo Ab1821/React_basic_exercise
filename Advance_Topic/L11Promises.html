@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Promises: It is used to handle ascynchronous operations in javascript,
+    they are easy to manage when dealing with muktiple acync op.
+</body>
+
+</html>
+<script>
+    const Mypro = new Promise((resolve, reject) => {
+        const a = 1;
+        const b = 10;
+        if (a == b) {
+            resolve("Success");
+        }
+        else {
+            reject("No Match found")
+        }
+    }).then((res) => {
+        console.log(res);
+    }).catch((Error) => {
+        console.log(Error);
+    })
+
+</script>
